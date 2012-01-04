@@ -57,3 +57,4 @@ class Template {
 function loadTemplate($filename) {
 	return new Template(file_get_contents($filename));
 }
+
