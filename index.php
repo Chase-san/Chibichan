@@ -50,26 +50,25 @@ function getFileList() {
 }
 
 function getThumbnailName($filename) {
-	//global $gallery_thumb_size;
-	//return '~thmb_'.$gallery_thumb_size.'_'.$gallery_thumb_size.'_'.md5($filename).'.jpg';
 	global $thumbnail_directory;
 	return $thumbnail_directory . '/' . md5($filename) . '.jpg';
 }
 
-function createThumbnail($filename, $max_thumb_width, $max_thumb_height, $quality) {
+function createThumbnail($filename, $quality) {
+	global $gallery_thumb_size;
 	$thumbname = getThumbnailName($filename);
 
 	if(!file_exists($filename)) return;
 
 	list($width_orig, $height_orig) = getimagesize($filename);
-	$ratio_orig = $width_orig/$height_orig;
+	$ratio = $width_orig/$height_orig;
 
-	$width = $max_thumb_width;
-	$height = $max_thumb_height;
-	if ($width/$height > $ratio_orig) {
-	   $width = floor($height*$ratio_orig);
+	$width = $gallery_thumb_size;
+	$height = $gallery_thumb_size;
+	if (1 > $ratio) {
+	   $width = floor($height*$ratio);
 	} else {
-	   $height = floor($width/$ratio_orig);
+	   $height = floor($width/$ratio);
 	}
 
 	$image = loadImage($filename);
@@ -98,16 +97,12 @@ function showGallery() {
 	$output = '';
 	
 	foreach(getFileList() as $img) {
-		//ignore thumbnail files obviously
-		//if(strpos($img, '~thmb_') === 0)
-			//continue;
-
 		$tmp = $thumb_template->copy();
 		$tmp->setBlock('url',rawurlencode($img));
 		
 		$thumbname = getThumbnailName($img);
 		if(!file_exists($thumbname)) {
-			createThumbnail($img,$gallery_thumb_size,$gallery_thumb_size,$gallery_thumb_quality);
+			createThumbnail($img,$gallery_thumb_quality);
 		}
 		
 		$tmp->setBlock('thumb',$thumbname);
