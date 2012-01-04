@@ -1,16 +1,11 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8" /><title>{!title!}</title>
-<style type="text/css">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8" /><title>{!title!}</title><style type="text/css">
 section#thumb > figure, section#thumb > figure > span { height: {!thumb_max_size!}px; width: {!thumb_max_size!}px }
-section#thumb, section#thumb > figure, section#thumb > figure > span { vertical-align: middle; text-align: center }
+section#thumb, section#thumb > figure, section#thumb > figure > span, footer { vertical-align: middle; text-align: center }
 section#thumb > figure { display:inline-block; margin:10px 15px; margin }
 section#thumb > figure > span > a > img { padding: 2px; border: 1px solid transparent }
 section#thumb > figure > span > a > img:hover { border: 1px solid #ddd }
 section#thumb > figure > span { display:table-cell }
 body { font-family: "Arial", "Helvetica", sans-serif }
-</style></head><body>
-<header><h2>chibichan</h2></header>
-<section id="thumb">
-{!thumb_block}<figure><span><a href="{!url!}"><img alt="" src="{!thumb!}" /></a></span></figure>{thumb_block!}
-</section>
-</footer></footer>
-</body>
+a, a:hover { color: #45361e; text-decoration: none }
+footer { margin-top: 10px; padding: 4px; font-size: 10px; }
+</style></head><body><header><h2>chibichan</h2></header><section id="thumb">{!thumb_block}<figure><span><a href="{!url!}"><img alt="" src="{!thumb!}" /></a></span></figure>{thumb_block!}</section><footer>Powered by <a href="https://github.com/Chase-san/Chibichan">Chibichan</a>.</footer></body>
