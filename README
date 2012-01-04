@@ -6,3 +6,30 @@ Chibichan as its name implies is designed to be small,
 and also probably used for very small deployments.
 
 Chibichan is also not done at all.
+
+
+HOW TO INSTALL:
+1. Copy all files to your directory.
+2. Set your directory to be writable.
+3. Drag and drop files into the directory with the files here.
+
+
+ROAD MAP
+
+Current Capacity:
+*Display all the images in the current directory
+*Create and use thumbnails for these images
+*Infinite width display page
+
+Soon:
+Provide each image with its own information page.
+
+Planned:
+*Switch from directory view to database based
+*Either Flat File or SQL based (wrapper?)
+*Allow tagging
+*Allow sorting dispayed images by tag.
+
+Maybe Eventually:
+*Allow Commenting
+*Allow tag categorization
