@@ -9,12 +9,13 @@ $gallery_thumb_quality = 80;
 
 require('template.php');
 
-if(!is_writeable('.')) {
-	die('<h1>You must make the directory writable!</h1>');
-}
 
 if(!file_exists($thumbnail_directory)) {
-	mkdir($thumbnail_directory, 0755);
+	mkdir($thumbnail_directory, 0777);
+}
+
+if(!is_writeable($thumbnail_directory)) {
+	die('<h1>You must make the thumbnail directory writable!</h1>');
 }
 
 
