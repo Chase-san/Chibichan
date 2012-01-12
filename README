@@ -32,6 +32,8 @@ Planned:
 
 Would be nice:
 -Bulk tag editing
+-Security Review
+-Comment the code a bit
 -Magic Number removal
 -- Creating them at all is a bad habit, I know
 
