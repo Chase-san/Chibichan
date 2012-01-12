@@ -1,0 +1,127 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, li, dd, dt, section, figure
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul, li
+{
+	list-style-type: none;
+}
+
+a,
+a:link,
+a:hover,
+a:visited
+{
+	text-decoration: none;
+	color: #669;
+}
+
+label
+{
+	display: block;
+}
+
+label,
+#details-sidebar > ul
+{
+	font-size: 80%;
+}
+
+#details-sidebar > ul > li {
+	overflow: hidden;
+}
+
+body
+{
+	font-family: "Arial", "Helvetica", sans-serif;
+	padding: 8px;
+}
+
+body > section#sidebar
+{
+	width: 220px;
+	float: left;
+	border: 1px solid #ddd;
+}
+
+body > section#sidebar > figure
+{
+	overflow: hidden;
+}
+
+body > section#sidebar > figure + figure
+{
+	margin-top: 10px;
+}
+
+body > section#content
+{
+	margin-left: 250px;
+}
+
+body > section#content > section#thumbs > figure
+{
+	display: inline-block;
+	vertical-align:middle;
+	text-align:center;
+	padding: 15px;
+}
+
+body > section#content > section#thumbs > figure > a > img
+{
+	padding:2px;
+	border:1px solid transparent;
+}
+
+body > section#content > section#thumbs > figure > a > img:hover
+{
+	border:1px solid #ddd;
+}
+
+#tag-sidebar
+{
+	margin-top: 5px;
+}
+
+#tag-sidebar > li
+{
+	font-size: 80%;
+}
+
+#tag-sidebar > li > a
+{
+	font-weight: bold;
+}
+
+#tag-sidebar > li > span
+{
+	margin-left: 4px;
+	color: #666;
+}
+
+body > footer,
+body > header,
+body > section#sidebar,
+body > section#content
+{
+	padding: 10px;
+}
+
+#pagination > * + * {
+	margin-left: 4px;
+}
+
+body > footer
+{
+	clear: both;
+	font-size: 10px;
+}
+
+.center
+{
+	vertical-align:middle;
+	text-align:center;
+}
+

@@ -1,0 +1,5 @@
+{title}chibichan{/title}
+{head}<style type="text/css">body > section#content > section#thumbs > figure { width: {gallery_thumb_size}px; height: {gallery_thumb_size}px; }</style>{/head}
+{sidebar}<figure id="slide-sidebar"><h5>Slideshow</h5>TODO</figure>
+<figure id="raw-sidebar"><h5><a href={raw_href}>View Raw</a></h5></figure><figure><h5>Upload</h5><form action="single.php" method="post" enctype="multipart/form-data"><input id="file" name="file" type="file"><label for="tags">Tags</label><textarea id="tags" name="tags"></textarea><br /><input name="submit" type="submit" value="Upload"></form></figure>{/sidebar}
+{content}<section id="thumbs" class="center">{thumbnail}<figure><a href="{href}"><img alt="{alt}" src="{src}" /></a></figure>{/thumbnail}</section><nav id="pagination" class="center">{pagination}{current_page}<span>{page_num}</span>{/current_page}{page}<a alt="page {page_num}" href="{page_href}">{page_num}</a>{/page}{/pagination}</nav>{/content}

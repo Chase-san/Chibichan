@@ -17,19 +17,29 @@ HOW TO INSTALL:
 ROAD MAP
 
 Current Capacity:
-*Display all the images in the current directory
-*Create and use thumbnails for these images
-*Infinite width display page
-
-Soon:
-Provide each image with its own information page.
+-Display all the images in the current directory
+-Create and use thumbnails for these images
+-Infinite width display page
+-Each image opens to its own information page.
+-Flat file database
+-Tagging
+-Sorting by tags
 
 Planned:
-*Switch from directory view to database based
-*Either Flat File or SQL based (wrapper?)
-*Allow tagging
-*Allow sorting dispayed images by tag.
+-Negated Tag Sorting
+-Slideshow based off query
+-Password protected upload/editing
+
+Would be nice:
+-Bulk tag editing
+-Magic Number removal
+-- Creating them at all is a bad habit, I know
 
 Maybe Eventually:
-*Allow Commenting
-*Allow tag categorization
+-User based upload/editing
+-Cleanup and refactor code
+-Allow Commenting
+-Allow tag categorization
+
+
+The first one to cleanup and refactor this code becomes my new best friend.
